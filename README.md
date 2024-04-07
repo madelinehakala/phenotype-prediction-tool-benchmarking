@@ -18,7 +18,10 @@ provide evidence that models that have been specifially designed for phenotype p
 - ML models: KNN, Logistic Regression, SVM
 
 ## Running the Code
-Clone this repo, ensure that all dependencies are installed then run the following in the command line:
+Clone this repo, ensure that all dependencies are installed, then run the following in the command line:
 ```
 python3 benchmark.py -o outfile.txt
 ```
+
+## Dependencies
+- TO ADD
