@@ -15,7 +15,7 @@ provide evidence that models that have been specifially designed for phenotype p
 ## Selected Tools
 - DeepGAMI (phenotype prediction tool that can use SNPs, RNA-Seq data, or both)
 - G2PDeep (phenotype prediction tool)
-- ML models: KNN, Logistic Regression, SVM
+- ML models: KNN, Logistic Regression, SVM (linear and rbf kernels)
 
 ## Running the Code
 Clone this repo, ensure that all dependencies are installed, then run the following in the command line:
