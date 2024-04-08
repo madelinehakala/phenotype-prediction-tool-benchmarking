@@ -24,4 +24,6 @@ python3 benchmark.py -o outfile.txt
 ```
 
 ## Dependencies
-- TO ADD
+- DeepGAMI (clone the repo: https://github.com/daifengwanglab/DeepGAMI)
+- scikit-learn
+- MORE TO ADD
