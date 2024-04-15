@@ -7,8 +7,7 @@ seeks to benchmark such tools to determine which tool has the overall best perfo
 provide evidence that models that have been specifially designed for phenotype prediction using gene expression data perform better than generally-applicable ML models.
 
 ## Workflow
-1. Clone repos and install other needed dependencies.
-2. Reformat data to be generally utilizable.
+1. Reformat data to be compatible with various models/tools.
 3. Train/test/optimize each model.
 4. Benchmark each model using the same evaluation process.
 
