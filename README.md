@@ -32,8 +32,7 @@ python3 joinData.py -g DeepGAMI/demo/expMat_filtered.csv -p DeepGAMI/demo/efeatu
 ```
 
 ## Dependencies
-- DeepGAMI
--   clone the repo: `git clone https://github.com/daifengwanglab/DeepGAMI)`
+- DeepGAMI (Clone the repo: `git clone https://github.com/daifengwanglab/DeepGAMI)`)
 - pytorch
 - scikit-learn
 - scipy
