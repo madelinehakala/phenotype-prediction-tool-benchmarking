@@ -23,7 +23,25 @@ Clone this repo, ensure that all dependencies are installed, then run the follow
 python3 benchmark.py -o outfile.txt
 ```
 
+## Downloading the Data
+Data can be accessed through the DeepGAMI GitHub repository. Clone the repo as instructed in the Dependencies section below. The data will be found in the "demo" folder.
+Once you have cloned the repo, run the following to make a master dataset that is compatible with the other (non-DeepGAMI) scripts:
+```
+python3 joinData.py -g [Gene Expression Dataset Path] -p [Physiological Features Dataset Path] -l [Labels/Metadata File Path]
+```
+
+Ex. I ran the following:
+```
+python3 joinData.py -g DeepGAMI/demo/expMat_filtered.csv -p DeepGAMI/demo/efeature_filtered.csv -l DeepGAMI/demo/label_visual.csv
+```
+
 ## Dependencies
 - DeepGAMI (clone the repo: https://github.com/daifengwanglab/DeepGAMI)
+- pytorch
 - scikit-learn
+- scipy
+- numpy
+- pandas
+- captum
+- imblearn
 - MORE TO ADD
