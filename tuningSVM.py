@@ -1,5 +1,6 @@
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
+import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn import svm
 from sklearn.model_selection import train_test_split
@@ -40,16 +41,33 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 untunedRbfModel = svm.SVC(kernel = 'rbf')
 untunedRbfModel.fit(X_train, y_train)
 y_pred_untunedRbf = untunedRbfModel.predict(X_test)
-accuracy_untunedRbf = accuracy_score(y_test, y_pred_untunedRbf)
 f1_untunedRbf = f1_score(y_test, y_pred_untunedRbf, average = 'macro')
-print(f'Rbf kernel accuracy (before tuning): {accuracy_untunedRbf}, Rbf kernel F1 (before tuning): {f1_untunedRbf}')
+print(f'Rbf kernel F1 (before tuning): {f1_untunedRbf}')
 
 # training and testing linear model
 untunedLinearModel = svm.SVC(kernel = 'linear')
 untunedLinearModel.fit(X_train, y_train)
 y_pred_untunedLinear = untunedLinearModel.predict(X_test)
-accuracy_untunedLinear = accuracy_score(y_test, y_pred_untunedLinear)
 f1_untunedLinear = f1_score(y_test, y_pred_untunedLinear, average = 'macro')
-print(f'Linear kernel accuracy (before tuning): {accuracy_untunedLinear}, Linear kernel F1 (before tuning): {f1_untunedLinear}')
+print(f'Linear kernel F1 (before tuning): {f1_untunedLinear}')
 
 
+# hyperparameter tuning
+grid = [0.001, 0.01, 0.1, 1, 10, 100, 1000]
+results = {}
+for c in grid:
+    tunedLinearModel = svm.SVC(kernel='linear', C=c, random_state=0)
+    tunedLinearModel.fit(X_train, y_train)
+    y_pred_tunedLinear = tunedLinearModel.predict(X_test)
+    f1_tunedLinear = f1_score(y_test, y_pred_tunedLinear, average = 'macro')
+    results[('linear', c, np.nan)] = f1_tunedLinear
+for c in grid:
+    for g in grid:
+        tunedRbfModel = svm.SVC(kernel = 'rbf', C = c, gamma = g, random_state = 0)
+        tunedRbfModel.fit(X_train, y_train)
+        y_pred_tunedRbf = tunedRbfModel.predict(X_test)
+        f1_tunedRbf = f1_score(y_test, y_pred_tunedRbf, average = 'macro')
+        results[('rbf', c, g)] = f1_tunedRbf
+best_params = max(results, key=results.get)
+print(f'Best params (kernel, C, gamma): {best_params}')
+print(f'F1 score of best tuned model: {round(results[best_params], 2)}')
