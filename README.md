@@ -24,7 +24,7 @@ python3 benchmark.py -o outfile.txt
 ```
 
 ## Downloading and Formatting the Data
-Data can be accessed through the DeepGAMI GitHub repository. Clone the repo as instructed in the Dependencies section below. The data will be found in the "demo" folder.
+Data can be accessed through the DeepGAMI GitHub repository. Clone the repo as instructed in the Dependencies section below.
 Once you have cloned the repo, run the following to make a master dataset that is compatible with the other (non-DeepGAMI) scripts:
 
 ```
@@ -32,7 +32,7 @@ python3 joinData.py -g DeepGAMI/demo/expMat_filtered.csv -p DeepGAMI/demo/efeatu
 ```
 
 ## Dependencies
-- DeepGAMI: Clone the repo --> `git clone https://github.com/daifengwanglab/DeepGAMI)`
+- DeepGAMI: clone the repo --> `git clone https://github.com/daifengwanglab/DeepGAMI`
 - pytorch
 - scikit-learn
 - scipy
