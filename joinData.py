@@ -46,4 +46,4 @@ labels.drop('ttype_sub', axis = 1, inplace = True)
 # merging data with labels
 allFeaturesWithLabels = allFeatures.merge(labels, on = 'cell', how = 'left')
 allFeaturesWithLabels = allFeaturesWithLabels.rename(columns = {'label': 'cortical_layer_class_label'})
-allFeaturesWithLabels.to_csv('mouse_cortical_layers.csv') # writing to csv
+allFeaturesWithLabels.to_csv('mouse_cortical_layers.csv', index = False) # writing to csv
