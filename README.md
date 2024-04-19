@@ -12,9 +12,9 @@ provide evidence that models that have been specifially designed for phenotype p
 4. Benchmark each model using the same evaluation process.
 
 ## Selected Tools
-- DeepGAMI (phenotype prediction tool that can use SNPs, RNA-Seq data, physiological features, or two together)
-- G2PDeep (phenotype prediction tool)
-- ML models: KNN, SVM (linear and rbf kernels)
+- DeepGAMI (deep learning phenotype prediction tool that can use SNPs, RNA-Seq data, physiological features, or two together)
+- G2PDeep (deep learning phenotype prediction tool)
+- Basic ML models: KNN, SVM (linear and rbf kernels)
 
 ## Running the Code
 Clone this repo, ensure that all dependencies are installed, then run the following in the command line:
