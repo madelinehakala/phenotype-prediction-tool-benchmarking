@@ -39,4 +39,5 @@ python3 joinData.py -g DeepGAMI/demo/expMat_filtered.csv -p DeepGAMI/demo/efeatu
 - pandas
 - captum
 - imblearn
-- MORE TO ADD
+- seaborn
+- matplotlib
