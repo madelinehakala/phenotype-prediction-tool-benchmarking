@@ -1,7 +1,7 @@
 # Benchmarking Various Phenotype Prediction Tools
 
 ## Overview
-This project utilizes multi-modal data (gene expression data and various physiological features) that can be used to train and test models for their ability to classify cells by cortical layer (aka, phenotype prediction).
+This project utilizes multi-modal data (gene expression data and various physiological features) that can be used to train to classify cells by cortical layer (aka, phenotype prediction).
 In addition to common machine learning models, there are select tools in the bioinformatics field that have been developed specifically for phenotype prediction. This project 
 seeks to benchmark such tools to determine which tool has the overall best performance when evaluating accuracy/F1 score, memory usage, and run time. Additionally, it may
 provide evidence that models that have been specifially designed for phenotype prediction using gene expression data perform better than generally-applicable ML models.
